@@ -135,7 +135,7 @@ class AggressiveStrategy(AbstractStrategy):
 
 class ConservativeStrategy(AbstractStrategy):
     def should_accuse_non_trivially(self, prev_turns):
-        if tools.higher_than((5, 4), prev_turns):
+        if tools.higher_than((5, 4), prev_turns[-1][1]):
             return False
         return True
 
